@@ -24,7 +24,13 @@ class ConfigController extends BaseController
     {
         if ($request->isMethod('post')) {
             $data = $request->post();
-            $ret = $this->model_obj->curdModel($request);
+            $file_img = $this->common($request, 'pic'); //上传图片
+            if (isset($file_img['flag']) && $file_img['flag'] === false) {
+                return redirect()->back()->withErrors($file_img['msg'])->withInput();
+            }
+            $pic = isset($data['pic'])?$data['pic']:'';
+            $data['pic'] = $file_img?$file_img:$pic;
+            $ret = $this->model_obj->curdModel($data);
             if ($ret) {
                 return redirect('config/config')->with('success', isset($data['id'])&&$data['id']>0?'修改成功':'添加成功');
             } else {

@@ -19,7 +19,7 @@
             <ul class="nav navbar-nav">
                 @foreach($class_list as $k => $v)
                 <li class="">
-                    <a href="#">{{$v->class_name}}</a>
+                    <a href="/website/list?class_id={{$v->id}}">{{$v->class_name}}</a>
                 </li>
                 @endforeach
             </ul>

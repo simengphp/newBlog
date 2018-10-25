@@ -10,10 +10,15 @@
                 <a href="/?read_num=1">按访问量</a>
             </div>
             <div class="panel-body article-list-group">
+                @if (count($article_list) == 0)
+                    <div align="center">
+                        <img src="/uploads/empty.png" alt="">
+                    </div>
+                @else
                 @foreach($article_list as $k => $v)
                 <dl class="article-list">
                     <dt class="article-list-title">
-                        <a href="http://yst168.cn/article/article_detail/23">
+                        <a href="">
                             {{$v->title}}
                         </a>
                     </dt>
@@ -28,6 +33,7 @@
                     </dd>
                 </dl>
                 @endforeach
+                @endif
             </div>
             <!-- 分页 -->
             <div class="page">
@@ -95,12 +101,9 @@
             <div class="col-md-3" style='background-color:red'>PHPPHP</div>
         </div>
         <ul class="ad">
-            <li>
-                <a href="http://www.yst168.cn/" target="_blank">
-                    <img src="./static/HHHH2222_kYSNcTJ.png" width="285">
-                </a>
-            </li>
-
+            <a href="/" target="_blank">
+                <img src="/uploads/{{$config->pic}}" width="240">
+            </a>
         </ul>
     </div>
 </div>

@@ -72,6 +72,14 @@
 					</div>
 				</div>
 				<div class="form-group">
+					<label for="" class="col-sm-2 control-label">图片</label>
+					<div class="col-sm-6">
+						<input name="pic" placeholder="图片" type="file">
+						<input type="hidden" value="{{ old('pic')??$ret['pic'] }}" name="pic" >
+						<img src="/uploads/{{ old('pic')??$ret['pic'] }}" alt="" style="width:200px;height:auto">
+					</div>
+				</div>
+				<div class="form-group">
 					<label for="" class="col-sm-2 control-label">
 						关于我们
 					</label>

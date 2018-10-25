@@ -16,7 +16,8 @@ class Config extends Base
     protected $model = null;
     public $timestamps = true;
     /**白名单字段*/
-    protected $fillable = ['title', 'keys', 'description', 'tel', 'postcode', 'website_code', 'about', 'contact_me'];
+    protected $fillable = ['title', 'keys', 'description', 'tel', 'pic',
+        'postcode', 'website_code', 'about', 'contact_me'];
     public function fromDateTime($value)
     {
         return empty($value)?$value:$this->getTimeFormat();
@@ -43,6 +44,7 @@ class Config extends Base
         $config->website_code = $data['website_code']??'';
         $config->about = $data['about']??'';
         $config->contact_me = $data['contact_me']??'';
+        $config->pic = $data['pic']??'';
         $ret = $config->save();
         return $ret;
     }
