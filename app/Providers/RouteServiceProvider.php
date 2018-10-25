@@ -38,11 +38,13 @@ class RouteServiceProvider extends ServiceProvider
         $this->mapApiRoutes();
 
         $this->mapWebRoutes();
-
+        /**淘宝客*/
+        $this->mapTaoRoutes();
         //自定义一个博客的路由
         $this->mapBlogRoutes();
 
         $this->mapManagerRoutes();
+
     }
 
     /**
@@ -71,6 +73,19 @@ class RouteServiceProvider extends ServiceProvider
         Route::middleware('blog')
              ->namespace($this->namespace)
              ->group(base_path('routes/blog.php'));
+    }
+
+    /**
+     * Define the "web" routes for the application.
+     *
+     * These routes all receive session state, CSRF protection, etc.
+     *
+     * @return void
+     */
+    protected function mapTaoRoutes()
+    {
+        Route::namespace($this->namespace)
+            ->group(base_path('routes/tao.php'));
     }
 
     /**

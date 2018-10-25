@@ -65,4 +65,23 @@ class BaseController extends Controller
             }
         }
     }
+
+
+    /**全选删除值*/
+    public function delFieldBase(Request $request)
+    {
+        $data = $request->all();
+        $id = $data['id'];
+        $table = $data['table'];
+        try {
+            $ret = (new Base())->delFieldBase($table, $id);
+        } catch (\Exception $exception) {
+            $ret = 0;
+        }
+        if ($ret) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
 }

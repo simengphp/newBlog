@@ -15,7 +15,7 @@
                     <p class="text-aqua">图片存储地址：/public/uploads/</p>
                     <p class="text-aqua">后台路由文件：manager.php</p>
                     <p class="text-aqua">开发团队：刘柱</p>
-                    <p class="text-aqua"><a href="http://www.zanpu.com" class="text-aqua" target="_blank">官网地址：www.zanpu.com</a></p>
+                    <p class="text-aqua"><a href="http://www.simengphp.com" class="text-aqua" target="_blank">官网地址：www.simengphp.com</a></p>
                 </div>
                 <!-- /.box-body -->
             </div>

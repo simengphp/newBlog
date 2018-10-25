@@ -22,7 +22,7 @@ class ClassName extends Base
     protected $primaryKey = 'id';
     protected $model = null;
     public $timestamps = true;
-    public $fillable = ['class_name', 'title', 'keys', 'desc', 'sort', 'is_nav'];
+    public $fillable = ['class_name', 'title', 'keys', 'desc', 'sort', 'is_nav','icon'];
     public function fromDateTime($value)
     {
         return empty($value)?$value:$this->getTimeFormat();
@@ -69,6 +69,7 @@ class ClassName extends Base
             $class->title = $data['title'];
             $class->keys = $data['keys'];
             $class->desc = $data['desc'];
+            $class->icon = $data['icon'];
             $class->is_nav = $data['is_nav'];
             $ret = $class->save();
         } else {

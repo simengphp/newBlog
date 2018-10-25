@@ -49,6 +49,7 @@ class FriendLink extends Base
         $search = $request->all();
         if (isset($search['search'])) {
             $ret = FriendLink::where('name', 'like', '%'.trim($search['search']).'%')
+                ->orwhere('value', 'like', '%'.trim($search['search']).'%')
                 ->orderBy('sort', 'asc')->orderBy('created_at', 'desc')->paginate($num);
             $ret->appends(array(
                 'search' => $search['search'],

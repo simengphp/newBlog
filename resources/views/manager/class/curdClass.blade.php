@@ -29,6 +29,15 @@
                                 </div>
                             </div>
                             <div class="form-group">
+                                <label for="class_name" class="col-sm-2 control-label">
+                                    分类图标<i style="color: red">*</i>
+                                </label>
+                                <div class="col-sm-6">
+                                    <input class="form-control" id="icon" name="icon"
+                                           value="{{old('icon')??$ret['icon']}}" placeholder="分类图标" type="text">
+                                </div>
+                            </div>
+                            <div class="form-group">
                                 <label for="is_nav" class="col-sm-2 control-label">
                                     是否是导航栏
                                 </label>

@@ -15,6 +15,7 @@ use Illuminate\Http\Request;
 
 class ArticleController extends BaseController
 {
+
     protected $model = null;
     public function __construct()
     {

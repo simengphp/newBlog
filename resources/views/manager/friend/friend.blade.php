@@ -6,10 +6,11 @@
         <div class="col-xs-12">
             <div class="box">
                 <div class="box-header">
-                    <div class="col-xs-1">
+                    <div class="col-xs-2">
                     <a href="/friend/curdFriend">
                         <button type="button" class="btn btn-primary">添加</button>
                     </a>
+                    <button type="button" onclick="getAllCheckBox('friend_link','{{csrf_token()}}')" class="btn btn-primary">删除</button>
                     </div>
                     <div class="col-xs-6">
                         <form action="" class="" method="post">
@@ -29,6 +30,7 @@
                     <table id="example2" class="table table-bordered table-hover">
                         <thead>
                         <tr>
+                            <th><input onclick="selectAll()" type="checkbox" id=""></th>
                             <th>编号</th>
                             <th>名称</th>
                             <th>排序</th>
@@ -40,6 +42,7 @@
                         <tbody>
                         @foreach($list as $val)
                         <tr>
+                            <td><input type="checkbox" name="id" value="{{$val->id}}" id=""></td>
                             <td>{{$val->id}}</td>
                             <td>{{$val->name}}</td>
                             <td><input type="text" class="form-control" style="width:100px"

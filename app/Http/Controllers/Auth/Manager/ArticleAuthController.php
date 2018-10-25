@@ -11,25 +11,28 @@ namespace App\Http\Controllers\Auth\Manager;
 class ArticleAuthController extends BaseAuthController
 {
     protected $rules = [
-        'title' => 'required|uniqueCommon:article',
-        'content' => 'required|uniqueCommon:article',
+        'title' => 'required',
         'desc' => 'required',
         'key' => 'required',
         'class_id' => 'required',
-        'sort'      =>'required'
+        'sort'      =>'required',
+        'old_price'      =>'required',
+        'new_price'      =>'required',
+        'ticket'      =>'required'
     ];
 
     protected $message = [
         'required' => '请输入:attribute',
-        'unique_common' => ':attribute已经存在',
     ];
 
     protected $customAttributes = [
         'title' => '标题',
-        'content' => '文章内容',
-        'desc' => '文章描述',
+        'desc' => '商品描述',
         'key' => '关键词',
-        'class_id' => '文章分类',
-        'sort'      =>'排序'
+        'class_id' => '商品分类',
+        'sort'      =>'排序',
+        'old_price'      =>'原价格',
+        'new_price'      =>'新价格',
+        'ticket'      =>'优惠券'
     ];
 }

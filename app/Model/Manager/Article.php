@@ -18,8 +18,8 @@ class Article extends Base
     protected $model = null;
     public $timestamps = true;
     /**白名单字段*/
-    protected $fillable = ['pic', 'title', 'content', 'desc', 'author', 'look', 'sort', 'key',
-        'class_id'];
+    protected $fillable = ['pic', 'title', 'desc', 'look', 'sort', 'key','old_price','new_price','ticket',
+        'class_id','is_index','ticket_num','postcode','end_time','website_key','website_desc'];
     public function fromDateTime($value)
     {
         return empty($value)?$value:$this->getTimeFormat();
@@ -67,13 +67,20 @@ class Article extends Base
             $article = Article::find($data['id']);
             $article->title = $data['title'];
             $article->pic = $data['pic'];
-            $article->content = $data['content'];
             $article->desc = $data['desc'];
-            $article->author = $data['author'];
             $article->look = $data['look'];
-            $article->sort = $data['sort'];
+            $article->sort = $data['sort']??0;
+            $article->is_index = $data['is_index']??0;
             $article->key = $data['key'];
             $article->class_id = $data['class_id'];
+            $article->old_price = $data['old_price'];
+            $article->new_price = $data['new_price'];
+            $article->ticket = $data['ticket'];
+            $article->website_key = $data['website_key'];
+            $article->website_desc = $data['website_desc'];
+            $article->ticket_num = $data['ticket_num']??0;
+            $article->postcode = $data['postcode']??0;
+            $article->end_time = $data['end_time']??0;
             $ret = $article->save();
         } else {
             $ret = Article::create($data);

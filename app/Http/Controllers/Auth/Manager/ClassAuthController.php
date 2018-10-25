@@ -12,7 +12,8 @@ class ClassAuthController extends BaseAuthController
 {
     protected $rules = [
         'class_name' => 'required|uniqueCommon:class',
-        'sort'      =>'required'
+        'sort'      =>'required',
+        'icon'      =>'required'
     ];
 
     protected $message = [
@@ -22,6 +23,7 @@ class ClassAuthController extends BaseAuthController
 
     protected $customAttributes = [
         'class_name' => '分类名称',
-        'sort'      =>'排序'
+        'sort'      =>'排序',
+        'icon'      =>'小图标'
     ];
 }
