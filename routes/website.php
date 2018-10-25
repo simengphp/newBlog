@@ -13,8 +13,6 @@
 
 
 Route::get('/', 'Website\IndexController@index');
-
 Route::get('/website/list', 'Website\ListController@articleList');
-
-
 Route::get('/website/detail', 'Website\ListController@articleDetail');
+Route::get('/website/stack', 'Website\StackController@stackList');

@@ -18,10 +18,13 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 @foreach($class_list as $k => $v)
-                <li class="">
+                <li class="{{ request()->get('class_id') == $v->id ? "active":''  }}">
                     <a href="/website/list?class_id={{$v->id}}">{{$v->class_name}}</a>
                 </li>
                 @endforeach
+                <li class="{{ request()->get('g_id') == 1 ? "active":'' }}">
+                    <a href="/website/stack?g_id=1">贡献者</a>
+                </li>
             </ul>
             <form class="navbar-form navbar-right" action="" method="get">
                 {{csrf_field()}}
