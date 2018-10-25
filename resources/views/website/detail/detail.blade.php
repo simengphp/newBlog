@@ -6,14 +6,16 @@
     <div class="view" style="background: #fff;">
         <div class="page-header">
             <dl>
-                <dt class="title"><h3>{{$article_detail->title}}</h3></dt>
+                <dt class="title" >
+                    <h3 style="width: 100%;height: auto;word-wrap:break-word;word-break:break-all;overflow: hidden;overflow-x: auto;white-space: pre-wrap; ">{{$article_detail->title}}</h3>
+                </dt>
                 <dd>
                     <span>{{$article_detail->created_at}}</span><br>
                     <span>阅读数:{{$article_detail->look}}</span>
                 </dd>
             </dl>
         </div>
-        <div id="test-editormd" class="editormd editormd-vertical" style="width:100%;height:auto;">
+        <div id="test-editormd" class="editormd editormd-vertical" style="width: 100%;height: auto;word-wrap:break-word;word-break:break-all;overflow: hidden;overflow-x: auto;white-space: pre-wrap; ">
             {!!$article_detail->content!!}
         </div>
     </div>
