@@ -11,7 +11,7 @@
             </div>
             <div class="panel-body article-list-group">
                 @if (count($article_list) == 0)
-                    <div align="center">
+                    <div align="center" style="width: 100%">
                         <img src="/uploads/empty.png" alt="">
                     </div>
                 @else
