@@ -43,6 +43,7 @@ class ArticleController extends BaseController
                 return redirect()->back()->withErrors($file_img['msg'])->withInput();
             }
             $pic = isset($data['pic'])?$data['pic']:'';
+            $data['m_id'] = session('blog_id');
             $data['pic'] = $file_img?$file_img:$pic;
             $data['author'] = $data['author']??'admin';
             $ret = $this->model->curdArticle($data);

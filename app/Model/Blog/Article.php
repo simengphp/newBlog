@@ -19,7 +19,7 @@ class Article extends Base
     public $timestamps = true;
     /**白名单字段*/
     protected $fillable = ['pic', 'title', 'content', 'desc', 'author', 'key',
-        'class_id'];
+        'class_id','m_id'];
     public function fromDateTime($value)
     {
         return empty($value)?$value:$this->getTimeFormat();
@@ -46,9 +46,10 @@ class Article extends Base
             $start_time = $search_date['start']??'';
             $end_time = $search_date['end']??time();
         }
+        $m_id = session('blog_id');
         if (isset($data['search']) || isset($search_date)) {
             $list = Article::where('title', 'like', '%'.trim($data['search']).'%')->
-            where('created_at', '>=', $start_time)->
+            where('created_at', '>=', $start_time)->where('m_id', $m_id)->
             where('updated_at', '<=', $end_time)->orderBy('created_at', 'desc')->
             orderBy('sort', 'asc')->paginate($num);
             $list->appends([
@@ -56,7 +57,7 @@ class Article extends Base
                 'search_date'   =>$data['search_date'],
             ]);
         } else {
-            $list = Article::orderBy('created_at', 'desc')->orderBy('sort', 'asc')->paginate($num);
+            $list = Article::orderBy('created_at', 'desc')->orderBy('sort', 'asc')->where('m_id', $m_id)->paginate($num);
         }
         return $list;
     }
@@ -72,6 +73,8 @@ class Article extends Base
             $article->author = $data['author'];
             $article->key = $data['key'];
             $article->class_id = $data['class_id'];
+            $article->m_id = $data['m_id'];
+            $article->sort = $data['sort']??0;
             $ret = $article->save();
         } else {
             $ret = Article::create($data);
