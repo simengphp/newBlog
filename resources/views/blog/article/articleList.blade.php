@@ -6,10 +6,11 @@
         <div class="col-xs-12">
             <div class="box">
                 <div class="box-header">
-                    <div class="col-xs-1">
+                    <div class="col-xs-2">
                         <a href="/blog/article/curdArticle">
                             <button type="button" class="btn btn-primary">添加</button>
                         </a>
+                        <button type="button" onclick="getAllCheckBox('article','{{csrf_token()}}')" class="btn btn-primary">删除</button>
                     </div>
                     <div class="col-xs-8">
                         <form action="" class="" method="post">
@@ -39,7 +40,7 @@
                     <table id="example2" class="table table-bordered table-hover">
                         <thead>
                         <tr>
-                            {{--<th>编号</th>--}}
+                            <th><input onclick="selectAll()" type="checkbox" id=""></th>
                             <th>文章标题</th>
                             <th>文章数据</th>
                             <th>创建时间</th>
@@ -50,12 +51,12 @@
                         <tbody>
                         @foreach($list as $val)
                             <tr>
-                                {{--<td>{{$val->id}}</td>--}}
+                                <td><input type="checkbox" name="id" value="{{$val->id}}" id=""></td>
                                 <td>{{$val->title}}</td>
                                 <td>
-                                    <i class="fa fa-eye"></i> 阅读 -
-                                    <i class="fa fa-commenting"></i> 评论 -
-                                    <i class="fa fa-folder-o"></i> 收藏
+                                    <i class="fa fa-eye"></i> 阅读 - {{$val->look}}
+                                    <i class="fa fa-commenting"></i> 评论 - {{$val->look}}
+                                    <i class="fa fa-folder-o"></i> 收藏 - {{$val->look}}
                                 </td>
                                 <td>{{$val->created_at}}</td>
                                 <td>{{$val->updated_at}}</td>

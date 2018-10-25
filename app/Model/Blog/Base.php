@@ -41,4 +41,11 @@ class Base extends Model
         //halt($data);
         return $data;
     }
+
+    public function delFieldBase($table, $id)
+    {
+        $arr = explode(',', $id);
+        $ret = Db::table($table)->whereIn('id', $arr)->update(['deleted_at'=>time()]);
+        return $ret;
+    }
 }
