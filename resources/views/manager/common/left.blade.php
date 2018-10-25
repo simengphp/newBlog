@@ -29,14 +29,14 @@
             <li class="treeview class article">
                 <a href="#">
                     <i class="fa fa-book"></i>
-                    <span>商品管理</span>
+                    <span>文章管理</span>
                     <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
                 </a>
                 <ul class="treeview-menu">
                     <li><a href="/class/classList"><i class="fa fa-circle-o"></i>分类列表</a></li>
-                    <li><a href="/article/articles"><i class="fa fa-circle-o"></i>商品列表</a></li>
+                    <li><a href="/article/articles"><i class="fa fa-circle-o"></i>文章列表</a></li>
                 </ul>
             </li>
             <li class="treeview config">
@@ -63,28 +63,28 @@
                     <li><a href="/friend/friendList"><i class="fa fa-circle-o"></i>友情链接</a></li>
                 </ul>
             </li>
-            <li class="treeview pic">
-                <a href="#">
-                    <i class="fa fa-camera-retro"></i>
-                    <span>网站图片管理</span>
-                    <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-                </a>
-                <ul class="treeview-menu">
-                    <li><a href="/pic/picList"><i class="fa fa-circle-o"></i>网站图片</a></li>
-                </ul>
-            </li>
+            {{--<li class="treeview pic">--}}
+                {{--<a href="#">--}}
+                    {{--<i class="fa fa-camera-retro"></i>--}}
+                    {{--<span>网站图片管理</span>--}}
+                    {{--<span class="pull-right-container">--}}
+              {{--<i class="fa fa-angle-left pull-right"></i>--}}
+            {{--</span>--}}
+                {{--</a>--}}
+                {{--<ul class="treeview-menu">--}}
+                    {{--<li><a href="/pic/picList"><i class="fa fa-circle-o"></i>网站图片</a></li>--}}
+                {{--</ul>--}}
+            {{--</li>--}}
             <li class="treeview nav">
                 <a href="#">
                     <i class="fa fa-bars"></i>
-                    <span>导航栏管理</span>
+                    <span>贡献者管理</span>
                     <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="/nav/navList"><i class="fa fa-circle-o"></i>导航栏</a></li>
+                    <li><a href="/stack/stack"><i class="fa fa-circle-o"></i>贡献者</a></li>
                 </ul>
             </li>
         </ul>

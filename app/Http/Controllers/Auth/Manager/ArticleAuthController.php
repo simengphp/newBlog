@@ -15,10 +15,8 @@ class ArticleAuthController extends BaseAuthController
         'desc' => 'required',
         'key' => 'required',
         'class_id' => 'required',
-        'sort'      =>'required',
-        'old_price'      =>'required',
-        'new_price'      =>'required',
-        'ticket'      =>'required'
+        'content'      =>'required',
+
     ];
 
     protected $message = [
@@ -27,12 +25,9 @@ class ArticleAuthController extends BaseAuthController
 
     protected $customAttributes = [
         'title' => '标题',
-        'desc' => '商品描述',
+        'desc' => '文章描述',
         'key' => '关键词',
-        'class_id' => '商品分类',
-        'sort'      =>'排序',
-        'old_price'      =>'原价格',
-        'new_price'      =>'新价格',
-        'ticket'      =>'优惠券'
+        'class_id' => '文章分类',
+        'content'      =>'内容',
     ];
 }

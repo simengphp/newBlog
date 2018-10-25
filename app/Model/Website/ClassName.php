@@ -14,7 +14,7 @@ class ClassName extends Base
 
     public function classList()
     {
-        $list = ClassName::all();
+        $list = ClassName::where('deleted_at',null)->get();
         return $list;
     }
 

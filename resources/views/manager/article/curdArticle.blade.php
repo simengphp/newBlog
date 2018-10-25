@@ -21,7 +21,7 @@
                     <div class="box-body">
                         <div class="form-group">
                             <label for="title" class="col-sm-2 control-label">
-                                商品标题<i style="color: red">*</i>
+                                标题<i style="color: red">*</i>
                             </label>
                             <div class="col-sm-6">
                                 <input class="form-control" id="title" name="title"
@@ -29,62 +29,8 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="title" class="col-sm-2 control-label">
-                                券结束时间
-                            </label>
-                            <div class="col-sm-6">
-                                <input class="form-control" id="end_time" name="end_time"
-                                       value="{{ old('end_time')??$ret['end_time'] }}" placeholder="券结束时间" type="text">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="old_price" class="col-sm-2 control-label">
-                                原价格<i style="color: red">*</i>
-                            </label>
-                            <div class="col-sm-6">
-                                <input class="form-control" name="old_price"
-                                       value="{{ old('old_price')??$ret['old_price'] }}" id="old_price" placeholder="原价格" type="text">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="new_price" class="col-sm-2 control-label">
-                                新价格<i style="color: red">*</i>
-                            </label>
-                            <div class="col-sm-6">
-                                <input class="form-control" name="new_price"
-                                       value="{{ old('new_price')??$ret['new_price'] }}" id="new_price" placeholder="新价格" type="text">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="author" class="col-sm-2 control-label">
-                                券<i style="color: red">*</i>
-                            </label>
-                            <div class="col-sm-6">
-                                <input class="form-control" name="ticket"
-                                       value="{{ old('ticket')??$ret['ticket'] }}" id="ticket" placeholder="券" type="text">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="author" class="col-sm-2 control-label">
-                                已领券数量
-                            </label>
-                            <div class="col-sm-6">
-                                <input class="form-control" name="ticket_num"
-                                       value="{{ old('ticket_num')??$ret['ticket_num'] }}" id="ticket" placeholder="已领券数量" type="text">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="author" class="col-sm-2 control-label">
-                                1包邮0不包邮
-                            </label>
-                            <div class="col-sm-6">
-                                <input class="form-control" name="postcode"
-                                       value="{{ old('postcode')??$ret['postcode'] }}" id="ticket" placeholder="1包邮0不包邮" type="text">
-                            </div>
-                        </div>
-                        <div class="form-group">
                             <label for="sort" class="col-sm-2 control-label">
-                                商品排序（正序0/1/2/3）<i style="color: red">*</i>
+                                排序（正序0/1/2/3）<i style="color: red">*</i>
                             </label>
                             <div class="col-sm-6">
                                 <input class="form-control" name="sort"
@@ -93,7 +39,7 @@
                         </div>
                         <div class="form-group">
                             <label for="look" class="col-sm-2 control-label">
-                                商品浏览量
+                                浏览量
                             </label>
                             <div class="col-sm-6">
                                 <input class="form-control" name="look"
@@ -102,7 +48,7 @@
                         </div>
                         <div class="form-group">
                             <label for="key" class="col-sm-2 control-label">
-                                商品关键词<i style="color: red">*</i>
+                                关键词<i style="color: red">*</i>
                             </label>
                             <div class="col-sm-6">
                                 <input class="form-control" name="key"
@@ -111,7 +57,7 @@
                         </div>
                         <div class="form-group">
                             <label for="key" class="col-sm-2 control-label">
-                                商品关键词（SEO）
+                                关键词（SEO）
                             </label>
                             <div class="col-sm-6">
                                 <input class="form-control" name="website_key"
@@ -128,11 +74,11 @@
                         </div>
                         <div class="form-group">
                             <label for="pid" class="col-sm-2 control-label">
-                                商品分类<i style="color: red">*</i>
+                                分类<i style="color: red">*</i>
                             </label>
                             <div class="col-sm-6">
                                 <select class="form-control" id="pid" name="class_id">
-                                    <option value="">请选择商品分类...</option>
+                                    <option value="">请选择分类...</option>
                                     @foreach($ret->class_list as $val)
                                     <option value="{{$val->id}}" {{ old('class_id') == $val->id ||
                                     isset($ret['class_id'])&&$ret['class_id'] == $val->id?'selected':'' }}>{{$val->class_name}}</option>
@@ -155,26 +101,34 @@
                         </div>
                         <div class="form-group">
                             <label for="desc" class="col-sm-2 control-label">
-                                商品描述SEO
+                                描述SEO
                             </label>
                             <div class="col-sm-6">
-                                <textarea id="" name="website_desc" rows="10" cols="80">
+                                <textarea id="" name="website_desc" rows="10" cols="70">
                                      {{ old('website_desc')??$ret['website_desc'] }}
                                 </textarea>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="desc" class="col-sm-2 control-label">
-                                商品描述<i style="color: red">*</i>
+                                描述<i style="color: red">*</i>
                             </label>
                             <div class="col-sm-6">
-						<textarea id="editor" name="desc" rows="10" cols="80" style="visibility: hidden; display: none;">
-							 {{ old('desc')??$ret['desc'] }}
+						    <textarea id="editor" name="desc" rows="10" cols="70" >{{ old('desc')??$ret['desc'] }}</textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="desc" class="col-sm-2 control-label">
+                                内容<i style="color: red">*</i>
+                            </label>
+                            <div class="col-sm-6">
+						<textarea id="content" name="content" rows="10" cols="80" >
+							 {{ old('content')??$ret['content'] }}
 						</textarea>
                             </div>
                             <script src="{{asset('./common/bower_components/ckeditor/ckeditor.js')}}"></script>
                             <script>
-                                CKEDITOR.replace('editor',
+                                CKEDITOR.replace('content',
                                     {filebrowserUploadUrl:'/common/commonUpload'})
                             </script>
                         </div>
