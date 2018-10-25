@@ -6,7 +6,7 @@
             <div class="col-xs-8">
                 友情链接：
                 @foreach($friend_link as $k=>$v)
-                    <a href="{{$v->value}}">{{$v->name}}&nbsp;</a>
+                    <a href="{{$v->value}}" target="_blank">{{$v->name}}&nbsp;</a>
                 @endforeach
             </div>
             <div class="col-md-4">
