@@ -18,7 +18,7 @@
                 @foreach($article_list as $k => $v)
                 <dl class="article-list">
                     <dt class="article-list-title">
-                        <a href="">
+                        <a href="/website/detail?id={{$v->id}}">
                             {{$v->title}}
                         </a>
                     </dt>
@@ -45,65 +45,5 @@
             </div>
         </div>
     </div>
-    <div class="container sidebar" style="background: #fff;">
-        <div class="row" style='color:white;'>
-            <div class="col-md-3" style='background-color:red'>PHP</div>
-            <div class="col-md-3" style='background-color:green'>Laravel</div>
-            <div class="col-md-3" style='background-color:red'>PHPPHP</div>
-            <div class="col-md-3" style='background-color:red'>PHPPHP</div>
-        </div>
-        <div class="row" style='color:white;'>
-            <div class="col-md-3" style='background-color:red'>PHP</div>
-            <div class="col-md-3" style='background-color:green'>Laravel</div>
-            <div class="col-md-3" style='background-color:red'>PHPPHP</div>
-            <div class="col-md-3" style='background-color:red'>PHPPHP</div>
-        </div>
-        <div class="row" style='color:white;'>
-            <div class="col-md-3" style='background-color:red'>PHP</div>
-            <div class="col-md-3" style='background-color:green'>Laravel</div>
-            <div class="col-md-3" style='background-color:red'>PHPPHP</div>
-            <div class="col-md-3" style='background-color:red'>PHPPHP</div>
-        </div>
-        <div class="row" style='color:white;'>
-            <div class="col-md-3" style='background-color:red'>PHP</div>
-            <div class="col-md-3" style='background-color:green'>Laravel</div>
-            <div class="col-md-3" style='background-color:red'>PHPPHP</div>
-            <div class="col-md-3" style='background-color:red'>PHPPHP</div>
-        </div>
-        <div class="row" style='color:white;'>
-            <div class="col-md-3" style='background-color:red'>PHP</div>
-            <div class="col-md-3" style='background-color:green'>Laravel</div>
-            <div class="col-md-3" style='background-color:red'>PHPPHP</div>
-            <div class="col-md-3" style='background-color:red'>PHPPHP</div>
-        </div>
-        <div class="row" style='color:white;'>
-            <div class="col-md-3" style='background-color:red'>PHP</div>
-            <div class="col-md-3" style='background-color:green'>Laravel</div>
-            <div class="col-md-3" style='background-color:red'>PHPPHP</div>
-            <div class="col-md-3" style='background-color:red'>PHPPHP</div>
-        </div>
-        <div class="row" style='color:white;'>
-            <div class="col-md-3" style='background-color:red'>PHP</div>
-            <div class="col-md-3" style='background-color:green'>Laravel</div>
-            <div class="col-md-3" style='background-color:red'>PHPPHP</div>
-            <div class="col-md-3" style='background-color:red'>PHPPHP</div>
-        </div>
-        <div class="row" style='color:white;'>
-            <div class="col-md-3" style='background-color:red'>PHP</div>
-            <div class="col-md-3" style='background-color:green'>Laravel</div>
-            <div class="col-md-3" style='background-color:red'>PHPPHP</div>
-            <div class="col-md-3" style='background-color:red'>PHPPHP</div>
-        </div>
-        <div class="row" style='color:white;'>
-            <div class="col-md-3" style='background-color:red'>PHP</div>
-            <div class="col-md-3" style='background-color:green'>Laravel</div>
-            <div class="col-md-3" style='background-color:red'>PHPPHP</div>
-            <div class="col-md-3" style='background-color:red'>PHPPHP</div>
-        </div>
-        <ul class="ad">
-            <a href="/" target="_blank">
-                <img src="/uploads/{{$config->pic}}" width="240">
-            </a>
-        </ul>
-    </div>
+    @include('website.common.right')
 </div>

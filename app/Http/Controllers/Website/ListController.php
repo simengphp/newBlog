@@ -30,11 +30,8 @@ class ListController extends BaseController
 
     public function articleDetail(Request $request)
     {
-        /**获取商品*/
-        $goods_detail = $this->model->getOneDetail($request->g_id);
-        $goods_detail['key'] = explode('|', $goods_detail['key']);
-        /**获取分类名称*/
-        $goods_detail['class_name'] = (new ClassName())->getOneDetail($goods_detail['class_id'])->class_name;
+        /**获取文章详情*/
+        $goods_detail = $this->model->getOneDetail($request->id);
         $website_title = $goods_detail['title'];
         $website_key = $goods_detail['website_key'];
         $website_desc = $goods_detail['website_desc'];
