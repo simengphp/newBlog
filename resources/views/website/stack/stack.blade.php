@@ -21,13 +21,30 @@
                         <dl class="article-list">
                             <dt class="article-list-title">
                                 <a href="/website/detail?id={{$v->id}}">
+                                    <img src="/uploads/{{$v->pic}}" alt="" style="width:100px;height: auto">
+                                </a>
+                                <a href="/website/detail?id={{$v->id}}">
                                     {{$v->name}}
                                 </a>
                             </dt>
-                            <dd class="article-list-footer">
+                            <dd class="article-list-footer" style="padding-top: 8px">
                                 <div class="info text-left">
-                                    <span>{{date('Y-m-d H:i:s',$v->created_at)}}</span>
-                                    <span>阅读数：<span>{{$v->name}}</span></span>
+                                    <span><strong>加入时间：</strong>{{date('Y-m-d H:i:s',$v->created_at)}}</span>
+                                </div>
+                            </dd>
+                            <dd class="article-list-footer" style="padding-top: 8px">
+                                <div class="info text-left">
+                                    <span><strong>个人网站：</strong>{{$v->website}}</span>
+                                </div>
+                            </dd>
+                            <dd class="article-list-footer" style="padding-top: 8px">
+                                <div class="info text-left">
+                                    <span><strong>技术栈：</strong>{{$v->stack}}</span>
+                                </div>
+                            </dd>
+                            <dd class="article-list-footer" style="padding-top: 8px">
+                                <div class="info text-left">
+                                    <span><strong>个人描述：</strong>{{$v->desc}}</span>
                                 </div>
                             </dd>
                         </dl>
