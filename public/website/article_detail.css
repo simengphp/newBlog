@@ -1,0 +1,62 @@
+/*文章详情样式*/
+.page-header{
+    margin: 0;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+.page-header .title {
+    text-align: left;
+    /*height: 30px;*/
+    /*line-height: 30px;*/
+    font-size: 18px;
+}
+
+.page-header dl{
+    margin-bottom: 0;
+}
+.page-header dd {
+    margin-top: 10px;
+}
+
+.editormd{
+    border: none!important;
+}
+
+.fixed-form{
+    position: fixed;
+    height: 90px;
+    background: #fff;
+    z-index: 100;
+    padding-top:20px;
+    right: 10px;
+    left: 10px;
+}
+.editormd-toolbar-container{
+    position: fixed;
+    top: 140px;
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+}
+.editormd-toolbar{
+    border-bottom: none;
+}
+
+.detail-ad-group{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.detail-ad-group .detail-list{
+    width: 200px;
+    height: 180px;
+    text-align: center;
+    margin-right: 10px;
+}
+.detail-ad-group .detail-list dd {
+    margin: 20px 0;
+}
+.detail-ad-group .detail-list img {
+    width: 200px;
+    height: 180px;
+}

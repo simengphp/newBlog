@@ -39,7 +39,7 @@ class RouteServiceProvider extends ServiceProvider
 
         $this->mapWebRoutes();
         /**淘宝客*/
-        $this->mapTaoRoutes();
+        $this->mapWebsiteRoutes();
         //自定义一个博客的路由
         $this->mapBlogRoutes();
 
@@ -82,10 +82,10 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    protected function mapTaoRoutes()
+    protected function mapWebsiteRoutes()
     {
         Route::namespace($this->namespace)
-            ->group(base_path('routes/tao.php'));
+            ->group(base_path('routes/website.php'));
     }
 
     /**
