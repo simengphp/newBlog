@@ -34,15 +34,23 @@ class Article extends Base
 
     public function articleList($num, $data)
     {
-        if (isset($data['search'])) {
-            $this->model->where('title', 'like', '%'.trim($data['search']).'%');
+        //dd($data);
+        if (isset($data['title'])) {
+            $this->model->where('title', 'like', '%'.trim($data['title']).'%');
         }
         if (isset($data['class_id'])) {
             $this->model->where('class_id', $data['class_id']);
         }
-        $list = $this->model->where('deleted_at',null)->orderBy('sort', 'asc')->orderBy('created_at', 'desc')->paginate($num);
+        if (isset($data['update'])) {
+            $this->model->orderBy('created_at', 'desc');
+        } elseif(isset($data['read_num'])) {
+            $this->model->orderBy('look', 'desc');
+        }else {
+            $this->model->orderBy('sort', 'asc');
+        }
+        $list = $this->model->where('deleted_at',null)->paginate($num);
         $list->appends([
-            'search'        =>isset($data['search'])?$data['search']:'',
+            'title'        =>isset($data['title'])?$data['title']:'',
             'class_id'   =>isset($data['class_id'])?$data['class_id']:'',
         ]);
         return $list;

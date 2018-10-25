@@ -6,8 +6,8 @@
             <div class="panel-heading text-right sort">
                 <a><strong>排序：</strong></a>
                 <a href="/">默认</a>
-                <a href="/?update=1">按更新时间</a>
-                <a href="/?read_num=1">按访问量</a>
+                <a href="?update=1">按更新时间</a>
+                <a href="?read_num=1">按访问量</a>
             </div>
             <div class="panel-body article-list-group">
                 @if (count($article_list) == 0)

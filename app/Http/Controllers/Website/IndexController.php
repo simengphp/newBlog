@@ -9,13 +9,14 @@
 namespace App\Http\Controllers\Website;
 
 use App\Model\Website\Article;
+use Illuminate\Http\Request;
 
 class IndexController extends BaseController
 {
-    public function index()
+    public function index(Request $request)
     {
         /**获取文章*/
-        $goods_list = (new Article())->articleList(16,[]);
+        $goods_list = (new Article())->articleList(16,$request->all());
         return view('website.index.index', ['article_list'=>$goods_list]);
     }
 }

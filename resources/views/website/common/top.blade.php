@@ -23,9 +23,11 @@
                 </li>
                 @endforeach
             </ul>
-            <form class="navbar-form navbar-right" method="post">
+            <form class="navbar-form navbar-right" action="" method="get">
+                {{csrf_field()}}
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="输入文章标题搜索">
+                    <input type="text" name="title" class="form-control"
+                          value="{{request()->get( 'title' )}}" placeholder="输入文章标题搜索">
                 </div>
                 <button type="submit" class="btn btn-default">搜索</button>
             </form>
