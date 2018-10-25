@@ -6,7 +6,7 @@
     @endforeach
     <ul class="ad">
         <a href="/" target="_blank">
-            <img src="/uploads/{{$config->pic}}" width="260" style="padding-top: 20px">
+            <img src="/uploads/{{$config->pic}}" width="240" style="padding-top: 20px">
         </a>
     </ul>
 </div>
