@@ -11,7 +11,6 @@ namespace App\Providers;
 use App\Model\Manager\Config;
 use App\Model\Website\ClassName;
 use App\Model\Website\Friend;
-use App\Model\Website\Nav;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\View;
 
@@ -25,9 +24,9 @@ class WebsiteServiceProvider extends AppServiceProvider
         $friend_link = (new Friend())->friendList();
 
         $config = (new Config())->getOneDetail(1);
-        $website_title = $config['title']??"淘券网,一个帮你省钱的购物网站";
-        $website_key = $config['keys']??"返利,优惠券,淘宝优惠券,消费返利网,京东优惠券";
-        $website_desc = $config['description']??"淘券网,一个帮你省钱的购物网站,提供天猫，淘宝等购物网站的优惠券，让你花更少的钱买更多的东西";
+        $website_title = $config['title'];
+        $website_key = $config['keys'];
+        $website_desc = $config['description'];
 
 
         View::share("website_title", $website_title);

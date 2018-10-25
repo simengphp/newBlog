@@ -8,7 +8,7 @@
             <dl>
                 <dt class="title"><h3>{{$article_detail->title}}</h3></dt>
                 <dd>
-                    <span>{{$article_detail->created_at}}</span>
+                    <span>{{$article_detail->created_at}}</span><br>
                     <span>阅读数:{{$article_detail->look}}</span>
                 </dd>
             </dl>
