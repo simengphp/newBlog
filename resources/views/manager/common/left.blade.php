@@ -77,6 +77,18 @@
             {{--</li>--}}
             <li class="treeview nav">
                 <a href="#">
+                    <i class="fa fa-flag"></i>
+                    <span>关键词</span>
+                    <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="/nav/navList"><i class="fa fa-circle-o"></i>关键词</a></li>
+                </ul>
+            </li>
+            <li class="treeview stack">
+                <a href="#">
                     <i class="fa fa-bars"></i>
                     <span>贡献者管理</span>
                     <span class="pull-right-container">

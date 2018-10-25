@@ -53,6 +53,7 @@
         <div class="col-md-3" style='background-color:red'>PHPPHP</div>
         <div class="col-md-3" style='background-color:red'>PHPPHP</div>
     </div>
+    <br>
     <ul class="ad">
         <a href="/" target="_blank">
             <img src="/uploads/{{$config->pic}}" width="240">
