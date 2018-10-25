@@ -4,7 +4,7 @@
         <a href="{{$v->url}}" style="color: white">{{$v->name}}</a>
     </div>
     @endforeach
-    <br>
+    <br />
     <ul class="ad">
         <a href="/" target="_blank">
             <img src="/uploads/{{$config->pic}}" width="240">
