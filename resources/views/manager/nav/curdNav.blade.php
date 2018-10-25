@@ -30,6 +30,15 @@
                             </div>
                             <div class="form-group">
                                 <label for="class_name" class="col-sm-2 control-label">
+                                    颜色<i style="color: red">*</i>
+                                </label>
+                                <div class="col-sm-6">
+                                    <input class="form-control" id="color" name="color"
+                                           value="{{old('color')??$ret['color']}}" placeholder="颜色rgb(255,0,255)" type="text">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="class_name" class="col-sm-2 control-label">
                                     url
                                 </label>
                                 <div class="col-sm-6">

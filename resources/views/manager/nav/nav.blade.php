@@ -31,7 +31,7 @@
                         <tr>
                             <th>编号</th>
                             <th>名称</th>
-                            <th>url</th>
+                            <th>颜色</th>
                             <th>排序</th>
                             <th>创建时间</th>
                             <th>修改时间</th>
@@ -44,7 +44,7 @@
                             <td>{{$val->id}}</td>
                             <td>{{$val->name}}</td>
                             <td><input type="text" class="form-control" style="width:100px"
-                                       onchange="ajaxData('/common/ajaxEditField',{'_token':'{{csrf_token()}}','table':'nav','field':'url','value':this.value,'id':{{$val->id}}})" value="{{$val->url}}"></td>
+                                       onchange="ajaxData('/common/ajaxEditField',{'_token':'{{csrf_token()}}','table':'nav','field':'color','value':this.value,'id':{{$val->id}}})" value="{{$val->color}}"></td>
                             <td><input type="text" class="form-control" style="width:100px"
                                        onchange="ajaxData('/common/ajaxEditField',{'_token':'{{csrf_token()}}','table':'nav','field':'sort','value':this.value,'id':{{$val->id}}})" value="{{$val->sort}}"></td>
                             <td>{{$val->created_at}}</td>

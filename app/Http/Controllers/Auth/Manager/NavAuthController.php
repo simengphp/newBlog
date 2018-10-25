@@ -12,6 +12,7 @@ class NavAuthController extends BaseAuthController
 {
     protected $rules = [
         'name' => 'required|uniqueCommon:nav',
+        'color'=> 'required'
     ];
 
     protected $message = [
@@ -21,5 +22,6 @@ class NavAuthController extends BaseAuthController
 
     protected $customAttributes = [
         'name' => '分类名称',
+        'color' => '颜色',
     ];
 }

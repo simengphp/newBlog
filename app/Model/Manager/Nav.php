@@ -22,7 +22,7 @@ class Nav extends Base
     protected $primaryKey = 'id';
     protected $model = null;
     public $timestamps = true;
-    public $fillable = ['name', 'url', 'sort'];
+    public $fillable = ['name', 'url', 'sort' ,'color'];
     public function fromDateTime($value)
     {
         return empty($value)?$value:$this->getTimeFormat();
@@ -65,6 +65,7 @@ class Nav extends Base
         if (isset($data['id'])&&$data['id']>0) {
             $class = Nav::find($data['id']);
             $class->name = $data['name'];
+            $class->color = $data['color'];
             $class->sort = $data['sort']??0;
             $class->url = $data['url']??'';
             $ret = $class->save();

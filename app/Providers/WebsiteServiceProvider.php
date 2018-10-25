@@ -11,6 +11,7 @@ namespace App\Providers;
 use App\Model\Manager\Config;
 use App\Model\Website\ClassName;
 use App\Model\Website\Friend;
+use App\Model\Website\Nav;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\View;
 
@@ -22,12 +23,11 @@ class WebsiteServiceProvider extends AppServiceProvider
         $class_list = (new ClassName())->classList();
         /**获取友情链接*/
         $friend_link = (new Friend())->friendList();
-
+        $nav_list = (new Nav())->navList();
         $config = (new Config())->getOneDetail(1);
         $website_title = $config['title'];
         $website_key = $config['keys'];
         $website_desc = $config['description'];
-
 
         View::share("website_title", $website_title);
         View::share("website_key", $website_key);
@@ -35,5 +35,6 @@ class WebsiteServiceProvider extends AppServiceProvider
         View::share("friend_link", $friend_link);
         View::share("class_list", $class_list);
         View::share("config", $config);
+        View::share("nav_list", $nav_list);
     }
 }

@@ -1,58 +1,9 @@
-<div class="container sidebar" style="background: #fff;">
-    <div class="row" style='color:white;'>
-        <div class="col-md-3" style='background-color:red'>PHP</div>
-        <div class="col-md-3" style='background-color:green'>Laravel</div>
-        <div class="col-md-3" style='background-color:red'>PHPPHP</div>
-        <div class="col-md-3" style='background-color:red'>PHPPHP</div>
+<div class="container sidebar">
+    @foreach($nav_list as $k=>$v)
+    <div class="col-md-5" style="background-color:{{$v->color}};">
+        <a href="{{$v->url}}" style="color: white">{{$v->name}}</a>
     </div>
-    <div class="row" style='color:white;'>
-        <div class="col-md-3" style='background-color:red'>PHP</div>
-        <div class="col-md-3" style='background-color:green'>Laravel</div>
-        <div class="col-md-3" style='background-color:red'>PHPPHP</div>
-        <div class="col-md-3" style='background-color:red'>PHPPHP</div>
-    </div>
-    <div class="row" style='color:white;'>
-        <div class="col-md-3" style='background-color:red'>PHP</div>
-        <div class="col-md-3" style='background-color:green'>Laravel</div>
-        <div class="col-md-3" style='background-color:red'>PHPPHP</div>
-        <div class="col-md-3" style='background-color:red'>PHPPHP</div>
-    </div>
-    <div class="row" style='color:white;'>
-        <div class="col-md-3" style='background-color:red'>PHP</div>
-        <div class="col-md-3" style='background-color:green'>Laravel</div>
-        <div class="col-md-3" style='background-color:red'>PHPPHP</div>
-        <div class="col-md-3" style='background-color:red'>PHPPHP</div>
-    </div>
-    <div class="row" style='color:white;'>
-        <div class="col-md-3" style='background-color:red'>PHP</div>
-        <div class="col-md-3" style='background-color:green'>Laravel</div>
-        <div class="col-md-3" style='background-color:red'>PHPPHP</div>
-        <div class="col-md-3" style='background-color:red'>PHPPHP</div>
-    </div>
-    <div class="row" style='color:white;'>
-        <div class="col-md-3" style='background-color:red'>PHP</div>
-        <div class="col-md-3" style='background-color:green'>Laravel</div>
-        <div class="col-md-3" style='background-color:red'>PHPPHP</div>
-        <div class="col-md-3" style='background-color:red'>PHPPHP</div>
-    </div>
-    <div class="row" style='color:white;'>
-        <div class="col-md-3" style='background-color:red'>PHP</div>
-        <div class="col-md-3" style='background-color:green'>Laravel</div>
-        <div class="col-md-3" style='background-color:red'>PHPPHP</div>
-        <div class="col-md-3" style='background-color:red'>PHPPHP</div>
-    </div>
-    <div class="row" style='color:white;'>
-        <div class="col-md-3" style='background-color:red'>PHP</div>
-        <div class="col-md-3" style='background-color:green'>Laravel</div>
-        <div class="col-md-3" style='background-color:red'>PHPPHP</div>
-        <div class="col-md-3" style='background-color:red'>PHPPHP</div>
-    </div>
-    <div class="row" style='color:white;'>
-        <div class="col-md-3" style='background-color:red'>PHP</div>
-        <div class="col-md-3" style='background-color:green'>Laravel</div>
-        <div class="col-md-3" style='background-color:red'>PHPPHP</div>
-        <div class="col-md-3" style='background-color:red'>PHPPHP</div>
-    </div>
+    @endforeach
     <br>
     <ul class="ad">
         <a href="/" target="_blank">

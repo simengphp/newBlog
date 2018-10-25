@@ -14,7 +14,7 @@ class Nav extends Base
 
     public function navList()
     {
-        $list = Nav::orderBy('sort','asc')->get();
+        $list = Nav::where('deleted_at',null)->orderBy('sort','asc')->get();
         return $list;
     }
 }
