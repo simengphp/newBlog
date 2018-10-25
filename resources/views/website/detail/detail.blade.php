@@ -14,7 +14,7 @@
             </dl>
         </div>
         <div id="test-editormd" class="editormd editormd-vertical" style="width:100%;height:auto;">
-            {{$article_detail->content}}
+            {!!$article_detail->content!!}
         </div>
     </div>
     @include('website.common.right')
