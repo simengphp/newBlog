@@ -2,7 +2,7 @@
 <body class="hold-transition register-page">
 <div class="register-box">
     <div class="register-logo">
-        <a href="/blog/index"><b>CMS</b></a>
+        <a href="/blog/index"><b>思梦PHP</b>注册</a>
     </div>
 
     <div class="register-box-body">

@@ -33,17 +33,17 @@ class Admin extends Base
 
     public function getOneMember(Request $request)
     {
+        $password = md5(md5($request->post('password')).'simengphp');
         $ret = $this->table_obj->where('account', $request->post('account'))->first();
         if (empty($ret)) {
             return ['code'=>0,'error'=>'账号不存在'];
         }
         $ret = $this->table_obj->where([['account', $request->post('account')],
-            ['password', $request->post('password')]])->first();
+            ['password', $password]])->first();
         if (empty($ret)) {
             return ['code'=>0,'error'=>'密码错误'];
         }
-        $this->table_obj->where([['account', $request->post('account')],['password', $request->
-        post('password')]])->limit(1)->update(['last_login_time'=>time()]);
+        $this->table_obj->where([['account', $request->post('account')],['password', $password]])->limit(1)->update(['last_login_time'=>time()]);
         Session::put('blog_id', $ret->id);
         Session::put('blog_name', $ret->name);
         Session::put('blog_account', $ret->account);
@@ -54,6 +54,7 @@ class Admin extends Base
 
     public function registerMember($data)
     {
+        $data['password'] = md5(md5($data['password']).'simengphp');
         return Admin::create($data);
     }
 }

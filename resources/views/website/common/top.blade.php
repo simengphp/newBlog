@@ -30,6 +30,9 @@
                           value="{{request()->get( 'title' )}}" placeholder="输入文章标题搜索">
                 </div>
                 <button type="submit" class="btn btn-default">搜索</button>
+                <a href="/blog/manager/index">
+                    <button type="button" class="btn btn-success">写文章</button>
+                </a>
             </form>
 
         </div><!-- /.navbar-collapse -->

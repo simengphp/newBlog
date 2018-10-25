@@ -2,7 +2,7 @@
 <body class="hold-transition login-page">
 <div class="login-box">
     <div class="login-logo">
-        <a href="#"><b></b>CMS</a>
+        <a href="#"><b>思梦PHP</b>CMS</a>
     </div>
     <!-- /.login-logo -->
     <div class="login-box-body">
@@ -54,7 +54,7 @@
         <!-- /.social-auth-links -->
 
         {{--<a href="#">I forgot my password</a><br>--}}
-        <a href="/blog/manager/register" class="text-center">我已经有账号,直接登录</a>
+        <a href="/blog/manager/register" class="text-center">没有账号，点击去注册</a>
 
     </div>
     <!-- /.login-box-body -->
