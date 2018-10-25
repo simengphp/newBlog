@@ -12,7 +12,7 @@
             <div class="panel-body article-list-group">
                 @if (count($article_list) == 0)
                     <div align="center" style="width: 100%">
-                        <img src="/uploads/empty.png" alt="">
+                        暂无数据！
                     </div>
                 @else
                 @foreach($article_list as $k => $v)
