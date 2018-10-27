@@ -9,6 +9,7 @@ $(function () {
         var token = $(this).attr('data-token');
         var id = $(this).attr('data-id');
         $.post(url,{'_token':token,'article_id':id},function (data) {
+            console.log(data)
         })
 
     })
