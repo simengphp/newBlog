@@ -34,7 +34,7 @@ class Collect extends Base
 
     public function findCollect($m_id,$article_id)
     {
-        $ret = DB::table('collect')->where('m_id',$m_id)->where('article_id',$article_id)->first();
+        $ret = DB::table('collect')->where('m_id',$m_id)->where('article_id',$article_id)->where('deleted_at',null)->first();
         return $ret;
     }
 }
