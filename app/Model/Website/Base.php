@@ -9,6 +9,7 @@
 namespace App\Model\Website;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class Base extends Model
 {

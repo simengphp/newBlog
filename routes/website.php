@@ -16,4 +16,6 @@ Route::group(['middleware'=>'website'], function () {
     Route::get('/website/list', 'Website\ListController@articleList');
     Route::get('/website/detail', 'Website\ListController@articleDetail');
     Route::get('/website/stack', 'Website\StackController@stackList');
+    Route::post('/base/collect', 'Website\BaseController@curdCollect');
+    Route::post('/base/delCollect', 'Website\BaseController@delCollect');
 });
