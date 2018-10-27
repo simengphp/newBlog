@@ -26,6 +26,9 @@ class ArticleController extends BaseController
     {
         $data = $request->all();
         $list=$this->model->articleList(5, $data);
+        foreach ($list as $k => $v) {
+            $v->collect_count = $this->countCollect($v->id);
+        }
         return view('blog.article.articleList', ['top_name'=>'文章', 'version'=>'1.0',
             'list'=>$list,'request'=>$request]);
     }

@@ -56,7 +56,7 @@
                                 <td>
                                     <i class="fa fa-eye"></i> 阅读 - {{$val->look}}
                                     <i class="fa fa-commenting"></i> 评论 - {{$val->look}}
-                                    <i class="fa fa-folder-o"></i> 收藏 - {{$val->look}}
+                                    <i class="fa fa-folder-o"></i> 收藏 - {{$val->collect_count}}
                                 </td>
                                 <td>{{$val->created_at}}</td>
                                 <td>{{$val->updated_at}}</td>

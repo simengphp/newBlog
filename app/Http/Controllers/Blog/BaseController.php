@@ -12,6 +12,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\Demo\UploadController;
 use App\Model\Blog\Base;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class BaseController extends Controller
 {
@@ -82,5 +83,10 @@ class BaseController extends Controller
         } else {
             return 0;
         }
+    }
+
+    public function countCollect($id)
+    {
+        return DB::table()->where('article_id', $id)->where('deleted_at',null)->count();
     }
 }
