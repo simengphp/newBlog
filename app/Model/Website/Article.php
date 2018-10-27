@@ -67,6 +67,7 @@ class Article extends Base
     {
         $ret = Article::find($id);
         $ret->look = $ret['look']+1;
+        $ret->save();
     }
 
 }
