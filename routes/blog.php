@@ -34,4 +34,7 @@ Route::group(['middleware'=>'blog'], function () {
     Route::any('/blog/stack/stack', 'Blog\StackController@stack');
     Route::any('/blog/stack/curdStack', 'Blog\StackController@curdStack');
     Route::any('/blog/stack/remove', 'Blog\StackController@remove');
+
+    Route::any('/blog/collect/collects', 'Blog\CollectController@collectList');
+    Route::any('/blog/collect/remove', 'Blog\CollectController@remove');
 });

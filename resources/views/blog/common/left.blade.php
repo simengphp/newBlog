@@ -38,6 +38,18 @@
                     <li><a href="/blog/article/articles"><i class="fa fa-circle-o"></i>文章列表</a></li>
                 </ul>
             </li>
+            <li class="treeview class collect">
+                <a href="#">
+                    <i class="fa fa-heart"></i>
+                    <span>收藏管理</span>
+                    <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="/blog/collect/collects"><i class="fa fa-circle-o"></i>收藏列表</a></li>
+                </ul>
+            </li>
             <li class="treeview config">
                 <a href="#">
                     <i class="fa fa-gear"></i>
