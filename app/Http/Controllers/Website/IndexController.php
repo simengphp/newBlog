@@ -17,6 +17,10 @@ class IndexController extends BaseController
     {
         /**获取文章*/
         $goods_list = (new Article())->articleList(16,$request->all());
+        $m_id = session('blog_id');
+        foreach ($goods_list as $k => $v) {
+            $v->is_collect = $this->isCollect($m_id, $v->id)?1:0;
+        }
         return view('website.index.index', ['article_list'=>$goods_list]);
     }
 }

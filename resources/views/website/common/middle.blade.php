@@ -20,12 +20,32 @@
                     <dt class="article-list-title">
                         <a href="/website/detail?id={{$v->id}}">
                             {{$v->title}}
+                            @if ($v->look < 100)
+                            <span style="color: red;font-size:5px"><i class="glyphicon glyphicon-star"></i></span>
+                            @elseif ($v->look > 100 and $v->look < 500)
+                            <span style="color: red;font-size:5px"><i class="glyphicon glyphicon-star"></i></span>
+                            <span style="color: red;font-size:5px"><i class="glyphicon glyphicon-star"></i></span>
+                            @elseif ($v->look > 500 and $v->look < 1000)
+                            <span style="color: red;font-size:5px"><i class="glyphicon glyphicon-star"></i></span>
+                            <span style="color: red;font-size:5px"><i class="glyphicon glyphicon-star"></i></span>
+                            <span style="color: red;font-size:5px"><i class="glyphicon glyphicon-star"></i></span>
+                            @else
+                            <span style="color: red;font-size:5px"><i class="glyphicon glyphicon-star"></i></span>
+                            <span style="color: red;font-size:5px"><i class="glyphicon glyphicon-star"></i></span>
+                            <span style="color: red;font-size:5px"><i class="glyphicon glyphicon-star"></i></span>
+                            <span style="color: red;font-size:5px"><i class="glyphicon glyphicon-star"></i></span>
+                            @endif
                         </a>
                     </dt>
                     <dd class="article-list-footer">
                         <div class="info text-left">
                             <span>{{date('Y-m-d H:i:s',$v->created_at)}}</span>
                             <span>阅读数：<span>{{$v->look}}</span></span>
+                            @if ($v->is_collect)
+                                <span style="color: red"><i class="glyphicon glyphicon-heart"></i></span>
+                                @else
+                                <span style="color: red"><i class="glyphicon glyphicon-heart-empty"></i></span>
+                            @endif
                         </div>
                     </dd>
                     <dd class="article-list-footer" style="padding-top: 15px">

@@ -25,6 +25,10 @@ class ListController extends BaseController
     {
         /**获取商品*/
         $article_list = $this->model->articleList(16,$request->all());
+        $m_id = session('blog_id');
+        foreach ($article_list as $k => $v) {
+            $v->is_collect = $this->isCollect($m_id, $v->id)?1:0;
+        }
         return view('website.list.list', ['article_list'=>$article_list]);
     }
 
