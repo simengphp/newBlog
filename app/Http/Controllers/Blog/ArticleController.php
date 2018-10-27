@@ -25,7 +25,7 @@ class ArticleController extends BaseController
     public function articleList(Request $request)
     {
         $data = $request->all();
-        $list=$this->model->articleList(5, $data);
+        $list=$this->model->articleList(15, $data);
         foreach ($list as $k => $v) {
             $v->collect_count = $this->countCollect($v->id);
         }

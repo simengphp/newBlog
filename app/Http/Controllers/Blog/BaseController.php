@@ -87,6 +87,6 @@ class BaseController extends Controller
 
     public function countCollect($id)
     {
-        return DB::table()->where('article_id', $id)->where('deleted_at',null)->count();
+        return DB::table('collect')->where('article_id', $id)->where('deleted_at',null)->count();
     }
 }
