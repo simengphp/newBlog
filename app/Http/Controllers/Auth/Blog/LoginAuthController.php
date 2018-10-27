@@ -11,13 +11,13 @@ namespace App\Http\Controllers\Auth\Blog;
 class LoginAuthController extends BaseAuthController
 {
     protected $rules = [
-        'account'   =>'required|max:8',
+        'account'   =>'required|max:12',
         'password'  =>'required|min:6',
     ];
 
     protected $message = [
         'required'   =>'请输入:attribute',
-        'max'   =>'请输入少于8位:attribute',
+        'max'   =>'请输入少于12位:attribute',
         'min'   =>'请输入大于6位:attribute',
     ];
 
