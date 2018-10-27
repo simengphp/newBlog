@@ -63,4 +63,10 @@ class Article extends Base
         return Article::find($id);
     }
 
+    public function editOneDetail($id)
+    {
+        $ret = Article::find($id);
+        $ret->look = $ret['look']+1;
+    }
+
 }
