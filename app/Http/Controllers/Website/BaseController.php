@@ -42,6 +42,8 @@ class BaseController extends Controller
             $save_data['updated_at'] = time();
             $ret = $model->curdCollect($save_data);
             return $ret;
+        } else {
+            return -1;
         }
     }
 
