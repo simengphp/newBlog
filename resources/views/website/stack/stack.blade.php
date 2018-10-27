@@ -20,10 +20,10 @@
                     @foreach($stack_list as $k => $v)
                         <dl class="article-list">
                             <dt class="article-list-title">
-                                <a href="/website/detail?id={{$v->id}}">
-                                    <img src="/uploads/{{$v->pic}}" alt="" style="width:100px;height: auto">
+                                <a href="/website/list?m_id={{$v->m_id}}">
+                                    <img class="img-circle" src="/uploads/{{$v->pic}}" alt="" style="width:100px;height: auto">
                                 </a>
-                                <a href="/website/detail?id={{$v->id}}">
+                                <a href="/website/list?m_id={{$v->id}}">
                                     {{$v->name}}
                                 </a>
                             </dt>

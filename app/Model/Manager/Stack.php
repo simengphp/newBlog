@@ -18,7 +18,7 @@ class Stack extends Base
     protected $model = null;
     public $timestamps = true;
     /**白名单字段*/
-    protected $fillable = ['name', 'sort', 'pic', 'stack', 'desc', 'website', 'contact'];
+    protected $fillable = ['name', 'sort', 'pic', 'stack', 'desc', 'website', 'contact','m_id'];
     public function fromDateTime($value)
     {
         return empty($value)?$value:$this->getTimeFormat();
@@ -62,6 +62,7 @@ class Stack extends Base
             $model->desc = $data['desc'];
             $model->website = $data['website'];
             $model->contact = $data['contact'];
+            $model->m_id = $data['m_id'];
             $ret = $model->save();
         } else {
             $ret = Stack::create($data);

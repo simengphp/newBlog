@@ -21,6 +21,15 @@
                     <div class="box-body">
                         <div class="form-group">
                             <label for="name" class="col-sm-2 control-label">
+                                贡献者平台id<i style="color: red">*</i>
+                            </label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="m_id" name="m_id"
+                                       value="{{ old('m_id')??$ret['m_id'] }}" placeholder="贡献者平台id" type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="name" class="col-sm-2 control-label">
                                 贡献者名称<i style="color: red">*</i>
                             </label>
                             <div class="col-sm-6">

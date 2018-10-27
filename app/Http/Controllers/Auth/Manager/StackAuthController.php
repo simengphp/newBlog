@@ -14,6 +14,7 @@ class StackAuthController extends BaseAuthController
         'name' => 'required|uniqueCommon:stack',
         'stack' => 'required|uniqueCommon:stack',
         'desc' => 'required',
+        'm_id' => 'required',
     ];
 
     protected $message = [
@@ -25,5 +26,6 @@ class StackAuthController extends BaseAuthController
         'name' => '名称',
         'stack' => '技术栈',
         'desc' => '简介',
+        'm_id' => '平台id',
     ];
 }
