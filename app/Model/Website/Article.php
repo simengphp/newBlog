@@ -38,6 +38,9 @@ class Article extends Base
         if (isset($data['title'])) {
             $this->model->where('title', 'like', '%'.trim($data['title']).'%');
         }
+        if (isset($data['m_id'])) {
+            $this->model->where('m_id', $data['m_id']);
+        }
         if (isset($data['class_id'])) {
             $this->model->where('class_id', $data['class_id']);
         }
