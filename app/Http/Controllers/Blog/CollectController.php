@@ -25,7 +25,7 @@ class CollectController extends BaseController
         $data = $request->all();
         $list=$this->model->collectList(15, $data);
         foreach ($list as $k => $v) {
-            $v->collect_count = $this->countCollect($v->id);
+            $v->collect_count = $this->countCollect($v->article_id);
             $v->article_tille = $this->model->getArticleDetail($v->article_id);
         }
         return view('blog.collect.collectList', ['top_name'=>'收藏文章', 'version'=>'1.0',
