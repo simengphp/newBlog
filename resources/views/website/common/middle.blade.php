@@ -27,8 +27,10 @@
                             <span>{{date('Y-m-d H:i:s',$v->created_at)}}</span>
                             <span>阅读数：<span>{{$v->look}}</span></span>
                         </div>
-                        <div class="edit text-right">
-                            {{$v->desc}}
+                    </dd>
+                    <dd class="article-list-footer" style="padding-top: 15px">
+                        <div class="info text-left">
+                            {!!$v->desc!!}
                         </div>
                     </dd>
                 </dl>
