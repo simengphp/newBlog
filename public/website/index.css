@@ -4,7 +4,9 @@ body,
 html {
     background: #fff;
 }
-
+p {
+    margin: 0 0 -40px;
+}
 .nav-search {
     cursor: pointer;
 }
