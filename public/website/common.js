@@ -1,4 +1,5 @@
 $(function () {
+    $("p img").addClass('img-responsive');
     $('.collect').click(function () {
         var url = '/base/collect';
         var token = $(this).attr('data-token');
