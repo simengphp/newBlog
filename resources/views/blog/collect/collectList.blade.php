@@ -19,7 +19,7 @@
                         <tbody>
                         @foreach($list as $val)
                             <tr>
-                                <td>{{$val->article_tille}}</td>
+                                <td><a href="/website/detail?id={{$v->id}}" target="_blank">{{$val->article_tille}}</a></td>
                                 <td>
                                     <i class="fa fa-eye"></i> 阅读 - {{$val->look}}
                                     <i class="fa fa-commenting"></i> 评论 - {{$val->look}}
