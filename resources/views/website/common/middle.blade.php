@@ -21,19 +21,19 @@
                         <a href="/website/detail?id={{$v->id}}">
                             {{$v->title}}
                             @if ($v->look < 100)
-                            <span style="color: red;font-size:5px" title="星级数根据阅读量以及文章质量自动处理"><i class="glyphicon glyphicon-star"></i></span>
+                            <span style="color: red;font-size:10px" title="星级数根据阅读量以及文章质量自动处理"><i class="glyphicon glyphicon-star"></i></span>
                             @elseif ($v->look > 100 and $v->look < 500)
-                            <span style="color: red;font-size:5px" title="星级数根据阅读量以及文章质量自动处理"><i class="glyphicon glyphicon-star"></i></span>
-                            <span style="color: red;font-size:5px" title="星级数根据阅读量以及文章质量自动处理"><i class="glyphicon glyphicon-star"></i></span>
+                            <span style="color: red;font-size:10px" title="星级数根据阅读量以及文章质量自动处理"><i class="glyphicon glyphicon-star"></i></span>
+                            <span style="color: red;font-size:10px" title="星级数根据阅读量以及文章质量自动处理"><i class="glyphicon glyphicon-star"></i></span>
                             @elseif ($v->look > 500 and $v->look < 1000)
-                            <span style="color: red;font-size:5px" title="星级数根据阅读量以及文章质量自动处理"><i class="glyphicon glyphicon-star"></i></span>
-                            <span style="color: red;font-size:5px" title="星级数根据阅读量以及文章质量自动处理"><i class="glyphicon glyphicon-star"></i></span>
-                            <span style="color: red;font-size:5px" title="星级数根据阅读量以及文章质量自动处理"><i class="glyphicon glyphicon-star"></i></span>
+                            <span style="color: red;font-size:10px" title="星级数根据阅读量以及文章质量自动处理"><i class="glyphicon glyphicon-star"></i></span>
+                            <span style="color: red;font-size:10px" title="星级数根据阅读量以及文章质量自动处理"><i class="glyphicon glyphicon-star"></i></span>
+                            <span style="color: red;font-size:10px" title="星级数根据阅读量以及文章质量自动处理"><i class="glyphicon glyphicon-star"></i></span>
                             @else
-                            <span style="color: red;font-size:5px" title="星级数根据阅读量以及文章质量自动处理"><i class="glyphicon glyphicon-star"></i></span>
-                            <span style="color: red;font-size:5px" title="星级数根据阅读量以及文章质量自动处理"><i class="glyphicon glyphicon-star"></i></span>
-                            <span style="color: red;font-size:5px" title="星级数根据阅读量以及文章质量自动处理"><i class="glyphicon glyphicon-star"></i></span>
-                            <span style="color: red;font-size:5px" title="星级数根据阅读量以及文章质量自动处理"><i class="glyphicon glyphicon-star"></i></span>
+                            <span style="color: red;font-size:10px" title="星级数根据阅读量以及文章质量自动处理"><i class="glyphicon glyphicon-star"></i></span>
+                            <span style="color: red;font-size:10px" title="星级数根据阅读量以及文章质量自动处理"><i class="glyphicon glyphicon-star"></i></span>
+                            <span style="color: red;font-size:10px" title="星级数根据阅读量以及文章质量自动处理"><i class="glyphicon glyphicon-star"></i></span>
+                            <span style="color: red;font-size:10px" title="星级数根据阅读量以及文章质量自动处理"><i class="glyphicon glyphicon-star"></i></span>
                             @endif
                         </a>
                     </dt>

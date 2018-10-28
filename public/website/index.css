@@ -4,11 +4,12 @@ body,
 html {
     background: #fff;
 }
-p {
-    margin: 0 0 -40px !important;
-}
 .nav-search {
     cursor: pointer;
+}
+
+#test-editormd p{
+    margin: 0 0 -35px !important;
 }
 
 .new-message {
