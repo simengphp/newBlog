@@ -15,6 +15,11 @@
                 </dd>
             </dl>
         </div>
+        <script>
+            $(function () {
+                $("#test-editormd p img").addClass('img-responsive');
+            });
+        </script>
         <div id="test-editormd" class="editormd editormd-vertical" style="width: 100%;height: auto;word-wrap:break-word;word-break:break-all;overflow: hidden;overflow-x: auto;white-space: pre-wrap; ">
             {!!$article_detail->content!!}
         </div>
