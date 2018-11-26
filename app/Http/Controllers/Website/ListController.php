@@ -35,11 +35,11 @@ class ListController extends BaseController
 
     public function articleDetail(Request $request)
     {
-        if (Cache::get('key1')) {
+        if (Cache::get('key2')) {
             echo 1111;
         }
-        Cache::add('key1', 1, 10);
-        $value = Cache::get('key1');
+        Cache::add('key2', 1, 10);
+        $value = Cache::get('key2');
         var_dump($value);
         /**获取文章详情*/
         $this->model->editOneDetail($request->id);
@@ -47,7 +47,7 @@ class ListController extends BaseController
         $website_title = $goods_detail['title'];
         $website_key = $goods_detail['website_key'];
         $website_desc = $goods_detail['website_desc'];
-        Cache::add('key1', 0, 10);
+        Cache::add('key2', 0, 10);
         return view('website.detail.detail', ['article_detail'=>$goods_detail,'website_title'=>$website_title,
             'website_desc'=>$website_desc,'website_key'=>$website_key]);
     }
