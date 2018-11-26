@@ -12,6 +12,7 @@ namespace App\Http\Controllers\Website;
 use App\Model\Website\Article;
 use App\Model\Website\ClassName;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 
 class ListController extends BaseController
 {
@@ -34,6 +35,9 @@ class ListController extends BaseController
 
     public function articleDetail(Request $request)
     {
+        Cache::add('key', 'value', 10);
+        $value = Cache::get('key');
+        var_dump($value);
         /**获取文章详情*/
         $this->model->editOneDetail($request->id);
         $goods_detail = $this->model->getOneDetail($request->id);
