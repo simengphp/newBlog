@@ -104,9 +104,7 @@
                                 描述SEO
                             </label>
                             <div class="col-sm-6">
-                                <textarea id="" name="website_desc" rows="10" cols="70">
-                                     {{ old('website_desc')??$ret['website_desc'] }}
-                                </textarea>
+                                <textarea id="" name="website_desc" rows="10" cols="70">{{ old('website_desc')??$ret['website_desc'] }}</textarea>
                             </div>
                         </div>
                         <div class="form-group">
